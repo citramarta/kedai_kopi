@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --gelap: #3e2a1d;
+  --kopi: #6f4e37;
+  --krem: #f3e5d0;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 960px;
+  font-family: "Nunito", "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gelap);
+  background-color: var(--krem);
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  color: var(--kopi);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--kopi);
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  color: var(--gelap);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: var(--kopi);
+  border-bottom-color: var(--kopi);
+}
+
+main {
+  padding: 1rem 0;
+}
+
+footer {
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  border-top: 2px solid var(--kopi);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+.daftar-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  padding: 1rem;
+  border: 2px solid var(--kopi);
+  border-radius: 8px;
+}
+
+.card h4 {
+  margin: 0 0 0.25rem;
+}
+
+.card p {
+  margin: 0.25rem 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+form input:not([type="radio"]),
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--gelap);
+  background-color: var(--krem);
+  border: 2px solid var(--kopi);
+  border-radius: 6px;
+}
+
+form p {
+  margin: 0 0 1.25rem;
+}
+
+fieldset {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--kopi);
+  border-radius: 6px;
+}
+
+fieldset label {
+  display: inline;
+  margin-left: 0.25rem;
+  font-weight: normal;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: 3px solid var(--kopi);
+  outline-offset: 2px;
+}
+
+button {
+  padding: 0.6rem 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--krem);
+  background-color: var(--kopi);
+  border: 2px solid var(--kopi);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--kopi);
+  background-color: var(--krem);
+}
+
+button:focus {
+  outline: 3px solid var(--gelap);
+  outline-offset: 2px;
+}
+
+@media (min-width: 600px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .daftar-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .daftar-menu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
